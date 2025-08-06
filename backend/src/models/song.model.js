@@ -21,7 +21,7 @@ const songSchema = new Schema({
         type: Number,
         required: true,
     },
-    AlbumId: {
+    albumId: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Album', 
         required: false,
