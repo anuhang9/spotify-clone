@@ -1,9 +1,9 @@
 import { Router } from "express";
+import { getStarts } from "../controllers/start.controller.js";
+import {protectRoute, requireAdmin} from '../middleware/auth.middleware.js'
 
 const router = Router();
 
-router.post('/', (req, res)=>{
-    res.send("start route")
-})
+router.post('/', protectRoute, requireAdmin, getStarts)
 
 export default router;
